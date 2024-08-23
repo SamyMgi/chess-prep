@@ -1,4 +1,4 @@
-# Chess preparation suggestion
+# Chess Preparation Suggestions
 
 Chess preparation is crucial in competitive play. In tournaments, players often know their pairings in advance, giving them the opportunity to study their opponent's games and gain a significant edge for the upcoming match.
 
