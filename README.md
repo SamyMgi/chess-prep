@@ -6,9 +6,7 @@ To assist in this process, we have developed an algorithm that suggests tailored
 
 Our approach has yielded promising results for short sequences across all levels of play. Specifically, for a 6-move preparation, our algorithm successfully applies the sequence in one out of two games and achieves a win rate of nearly 95%.
 
-![Evaluation of 6-Move preparation on an evaluation set](img/results_set_size6.png)
-
-![Evaluation of 6-Move preparation on the next game](img/results_single_size6.png)
+![Evaluation of 6-Move preparation on the next game](img/results_single_size.png)
 
 **For the first version of the model, we suggest using it for short sequences and refining the moves manually. The short sequence will quickly help identify a specific line.**
 
