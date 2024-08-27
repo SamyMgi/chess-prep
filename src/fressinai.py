@@ -1,3 +1,9 @@
+import chess
+import chess.pgn
+import numpy as np
+import pandas as pd
+from datetime import datetime
+
 class FressinAI:
   """
     Input :
@@ -255,3 +261,40 @@ class FressinAI:
       print("Usability %:", self.white_usability)
       print("Success %:", self.white_success)
 
+
+"""
+  Convert san to a list of moves.
+  Input :
+    * san : moves in san format. Ex : "1.e4 c5 2.Nf3"]
+  Output :
+    * movelist : moves in list format. Ex : ["e4", "c5", "Nf3"]
+"""
+def sanToMovelist(san):
+  movelist = san.split(" ")
+  movelist = [move.split('.', 1)[1] if '.' in move else move for move in movelist]
+  return movelist
+
+"""
+  Convert list to a san moves.
+  Input :
+    * movelist : moves in list format. Ex : ["e4", "c5", "Nf3"]
+  Output :
+    * san : moves in san format. Ex : "1.e4 c5 2.Nf3"]
+"""
+def movelistToSan(movelist):
+  m = 1
+  san = ""
+  turn_color = 1
+  for move in movelist:
+    if turn_color == 1:
+      san+=(str(int(m))+'.'+move)
+      turn_color = 0
+    else :
+      san+=(' '+move+' ')
+      turn_color = 1
+    m+=0.5
+
+  if san[-1] == " ":
+    san = san[:-1]
+
+  return san
